@@ -37,5 +37,11 @@ body {
 .task {
     display:flex;
     justify-content: space-between;
-    padding:1em;
+    padding : 1em;
 }
+.task-done {
+    text-decoration: line-through;
+    background: lightgray;
+    flex-grow: 1;
+}
+
