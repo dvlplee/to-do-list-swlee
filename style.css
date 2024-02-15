@@ -44,4 +44,6 @@ body {
     background: lightgray;
     flex-grow: 1;
 }
-
+.task-tabs div {
+    cursor: pointer;
+}
