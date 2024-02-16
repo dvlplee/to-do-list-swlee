@@ -1,49 +1,57 @@
 body {
-    margin: 0px;
-    background-image: url("images/background.avif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container {
+    margin: 0; /* body의 margin 기본값이 8px이라서*/
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat; /* 배경 반복삭제 */
+    background-size: cover; /* 전부 덮기 */
+  }
+  
+  .container {
     background-color: white;
-    min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.task-area {
-    border: 1px solid lightgray;
-}
-
-.task-tabs {
-    display: flex; /* 가로로 만들기 */
-    border-bottom: 1px solid rgb(154, 129, 129);
-    position:relative;
-}
-
-.task-tabs div {
-    padding: 1em;
-}
-
-#under-line {
+    min-height: 100vh; /* 보는 화면 높이(view height)이 100%로 최소높이가 되게함. 박스가 커짐.*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* box shadow css 코드 구글링 */
+  }
+  
+  .task-area {
+    border: 1px solid lightgrey; /* 테두리태그: 두께, 테두리스타일, 색상 */
+    margin-top: 2em;
+  }
+  
+  .task-tabs {
+    display: flex; /* 가로로 만들어줌. flex는 부모 태그한테 적용해야한다!!! */
+    border-bottom: 1px solid lightgrey; /* tabs영역 밑에 구분선 */
+    position: relative; /* under-line의 부모 태그에 적용 */
+  }
+  
+  .task-tabs div {
+    padding: 1em; /* task-tabs의 div에 공간 주기 */
+    cursor: pointer; /* 커서만들기*/
+  }
+  
+  #under-line {
+    /* 자바스크립트에서 사용할 것이기 때문에 클래스가 아닌 아이디 */
     height: 4px;
     background-color: pink;
     position: absolute;
-    width: 70px;
+    width: 80px;
     left: 0px;
-    top:52px;
+    top: 52px;
     padding: 0px;
-}
-.task {
-    display:flex;
-    justify-content: space-between;
-    padding : 1em;
-}
-.task-done {
-    text-decoration: line-through;
-    background: lightgray;
-    flex-grow: 1;
-}
-.task-tabs div {
-    cursor: pointer;
-}
+  }
+  
+  .task {
+    display: flex;
+    justify-content: space-between; /* 간격 떨어뜨리기*/
+    padding: 1em;
+  }
+  
+  .task-done {
+    text-decoration: line-through; /* 텍스트에 취소선*/
+  }
+  /* 3탄 과제 */
+  #taskBG {
+    background-color: lightgrey;
+  }
+  
